@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n6w-7T-Myc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--画像合成-->
+        <scene sceneID="kt7-Me-HBz">
+            <objects>
+                <viewController storyboardIdentifier="sec" wantsFullScreenLayout="YES" id="wK4-gn-bDC" customClass="SecondViewController" customModule="Sample_Core_Graphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMH-b0-dp9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-tI-Koa">
+                                <rect key="frame" x="94" y="588" width="187.5" height="66.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="合成">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="blendImage:" destination="wK4-gn-bDC" eventType="touchUpInside" id="Lyg-9c-lcj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1043.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-tP-8eX">
+                                <rect key="frame" x="-0.5" y="95.5" width="375" height="467"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ehw-tP-8eX" firstAttribute="centerX" secondItem="cfA-uP-0Ro" secondAttribute="centerX" id="1fh-2x-0Pt"/>
+                            <constraint firstItem="Jtv-tI-Koa" firstAttribute="width" secondItem="bMH-b0-dp9" secondAttribute="width" multiplier="0.5" id="791-y8-Sxb"/>
+                            <constraint firstItem="Jtv-tI-Koa" firstAttribute="centerY" secondItem="cfA-uP-0Ro" secondAttribute="centerY" multiplier="1.7" id="EPR-b1-hbl"/>
+                            <constraint firstItem="Jtv-tI-Koa" firstAttribute="height" secondItem="bMH-b0-dp9" secondAttribute="height" multiplier="0.1" id="ItW-vo-oRC"/>
+                            <constraint firstItem="Ehw-tP-8eX" firstAttribute="height" secondItem="bMH-b0-dp9" secondAttribute="height" multiplier="0.7" id="Tfp-Uw-jG1"/>
+                            <constraint firstItem="Ehw-tP-8eX" firstAttribute="centerY" secondItem="cfA-uP-0Ro" secondAttribute="centerY" multiplier="0.9" id="bAh-dH-1nv"/>
+                            <constraint firstItem="Jtv-tI-Koa" firstAttribute="centerX" secondItem="cfA-uP-0Ro" secondAttribute="centerX" id="fJf-AX-ufl"/>
+                            <constraint firstItem="Ehw-tP-8eX" firstAttribute="width" secondItem="bMH-b0-dp9" secondAttribute="width" id="muf-Cj-9NS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cfA-uP-0Ro"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画像合成" id="s2v-fj-zgj"/>
+                    <connections>
+                        <outlet property="showImg" destination="Ehw-tP-8eX" id="bGy-hX-XtF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRn-nt-EV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="177"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample_Core_Graphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5w-P2-VX9">
+                                <rect key="frame" x="0.0" y="92.5" width="375" height="400"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-OT-bGP">
+                                <rect key="frame" x="94" y="575" width="187.5" height="66.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="新規画像">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawCurrentImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krj-sc-xoD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BMS-OT-bGP" secondAttribute="trailing" constant="20" symbolic="YES" id="AAS-AZ-h91"/>
+                            <constraint firstItem="BMS-OT-bGP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Aai-MQ-bKd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BMS-OT-bGP" secondAttribute="bottom" constant="25.5" id="Bvn-6K-Nmi"/>
+                            <constraint firstItem="R5w-P2-VX9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="Gw7-gL-o6l"/>
+                            <constraint firstItem="R5w-P2-VX9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HOH-Xz-Qsv"/>
+                            <constraint firstItem="BMS-OT-bGP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="JZK-IV-kF3"/>
+                            <constraint firstItem="R5w-P2-VX9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aKK-hQ-XzW"/>
+                            <constraint firstItem="R5w-P2-VX9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="kgO-16-ryd"/>
+                            <constraint firstItem="BMS-OT-bGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="xYO-JC-Owg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="uUe-CC-PFK">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="7fq-9I-YUJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HnL-uL-8c2">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="toSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRz-Lv-wXZ"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="wK4-gn-bDC" kind="show" id="fbS-11-LPr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="showImage" destination="R5w-P2-VX9" id="bH6-Fe-gB8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PIT-mu-xLi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n6w-7T-Myc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cNd-BZ-fa6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SH1-Oc-iBM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cac-eV-hCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2374" y="154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_1043.png" width="750" height="1334"/>
+    </resources>
+</document>
